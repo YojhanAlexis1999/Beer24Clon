@@ -1,5 +1,5 @@
 import { 
-    PRUEBA
+    
 } from '../../types';
 
 export default (state, action) => {
@@ -8,12 +8,6 @@ export default (state, action) => {
 
         default:
             return state
-
-        case PRUEBA:
-            return {
-                ...state,
-                data: action.payload
-            }
         
     }
 
