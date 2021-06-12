@@ -12,17 +12,9 @@ import Inicio from '../inicio/Inicio'
 import Preparacion from '../inicio/preparacion/Preparacion'
 import Carta from '../inicio/carta/Carta'
 
-const CustomDrawer = (props) => {
-    return (
-        <View style={{ flex: 1 }}>
-            <DrawerContentScrollView>
-                <DrawerItemList {...props} />
-            </DrawerContentScrollView>
-        </View>
-    )
-}
+import DrawerContent from './DrawerContent';
 
-const Drawer = () => {
+const Drawer = ({ navigation }) => {
 
     const Menu = createDrawerNavigator();
 
@@ -35,12 +27,12 @@ const Drawer = () => {
             drawerPosition="right"
             drawerStyle={{
                 width: 280,
-                backgroundColor: '#444',
+                backgroundColor: 'rgba(0,0,0,0.5)',
                 color: '#fff',
             }}
             drawerType={drawerType}
             edgeWidth={100}
-            drawerContent={props => <CustomDrawer {...props} />}
+            drawerContent={props => <DrawerContent {...props} navigation={navigation} />}
         >
             <Menu.Screen
                 name="← Inicio"
