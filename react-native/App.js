@@ -24,9 +24,9 @@ const App = () => {
         <StackNavigator.Navigator>
 
           <StackNavigator.Screen name="Inicio" component={Drawer} options={options} />
-          <StackNavigator.Screen name="Preparacion" component={Preparacion} />
-          <StackNavigator.Screen name="Carta" component={Carta} />
-          <StackNavigator.Screen name="Ubicacion" component={Ubicacion} />
+          <StackNavigator.Screen name="Preparacion" component={Preparacion} options={options} />
+          <StackNavigator.Screen name="Carta" component={Carta} options={options} />
+          <StackNavigator.Screen name="Ubicacion" component={Ubicacion} options={options} />
 
           <StackNavigator.Screen name="Login" component={Login} />
           <StackNavigator.Screen name="Registro" component={Registro} />
