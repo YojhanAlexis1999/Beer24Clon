@@ -1,16 +1,13 @@
 import React from 'react'
-import { 
-    View,
-    useWindowDimensions 
-} from 'react-native'
-import {
-    createDrawerNavigator,
-    DrawerContentScrollView,
-    DrawerItemList,
-} from '@react-navigation/drawer';
+import { useWindowDimensions } from 'react-native'
+import { createDrawerNavigator } from '@react-navigation/drawer';
+
 import Inicio from '../inicio/Inicio'
 import Preparacion from '../inicio/preparacion/Preparacion'
 import Carta from '../inicio/carta/Carta'
+import Ubicacion from '../inicio/ubicacion/Ubicacion'
+import Orden from '../inicio/orden/Orden';
+import CambioCiudad from '../inicio/cambio_ciudad/CambioCiudad';
 
 import DrawerContent from './DrawerContent';
 
@@ -35,16 +32,28 @@ const Drawer = ({ navigation }) => {
             drawerContent={props => <DrawerContent {...props} navigation={navigation} />}
         >
             <Menu.Screen
-                name="← Inicio"
+                name="Index"
                 component={Inicio}
             />
             <Menu.Screen
-                name="← Preparacion"
+                name="Preparacion"
                 component={Preparacion}
             />
             <Menu.Screen
-                name="← Carta"
+                name="Carta"
                 component={Carta}
+            />
+            <Menu.Screen 
+                name="Ubicacion"
+                component={Ubicacion}
+            />
+            <Menu.Screen 
+                name="Orden"
+                component={Orden}
+            />
+            <Menu.Screen 
+                name="CambioCiudad"
+                component={CambioCiudad}
             />
         </Menu.Navigator>
     )

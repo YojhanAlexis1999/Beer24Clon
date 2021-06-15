@@ -1,1 +1,1 @@
-export const PRUEBA = 'PRUEBA'
+export const CAMBIAR_LOCALIZACION = 'CAMBIAR_LOCALIZACION'

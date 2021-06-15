@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, ImageBackground, SafeAreaView, Image } from 'react-native'
+import { View, ImageBackground, SafeAreaView } from 'react-native'
 import ImageBackgroundStyles from '../styles/ImageBackgroundStyles'
 import InicioStyles from '../styles/InicioStyles'
 import Fondo from '../assets/fondo_pantalla.jpg'

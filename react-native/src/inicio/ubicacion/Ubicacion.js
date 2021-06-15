@@ -9,16 +9,16 @@ const Ubicacion = () => {
             <MapView 
                 style={UbicacionStyles.map}
                 initialRegion={{
-                    latitude: 37.78825,
-                    longitude: -122.4324,
+                    latitude: 2.92769914,
+                    longitude: -75.280725,
                     latitudeDelta: 0.0922,
                     longitudeDelta: 0.0421,
                 }}
             >
                 <MapView.Marker 
                     coordinate={{
-                        latitude: 37.78825,
-                        longitude: -122.4324,
+                        latitude: 2.92769914,
+                        longitude: -75.280725,
                     }} 
                 />
             </MapView>

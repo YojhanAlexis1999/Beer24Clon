@@ -24,7 +24,7 @@ const DrawerContent = (props) => {
                         )}
                         label="Inicio"
                         labelStyle={{ color: '#fff' }}
-                        onPress={() => props.navigation.navigate("Inicio")}
+                        onPress={() => props.navigation.navigate("Index")}
                     />
                     <DrawerItem
                         icon={({size}) => (
@@ -84,7 +84,7 @@ const DrawerContent = (props) => {
                         )}
                         label="Mi Orden"
                         labelStyle={{ color: '#fff' }}
-                        onPress={() => { }}
+                        onPress={() => props.navigation.navigate("Orden")}
                     />
                     <DrawerItem
                         icon={({size}) => (
@@ -96,7 +96,7 @@ const DrawerContent = (props) => {
                         )}
                         label="Cambiar Ciudad"
                         labelStyle={{ color: '#fff' }}
-                        onPress={() => { }}
+                        onPress={() => props.navigation.navigate("CambioCiudad")}
                     />
                 </Drawer.Section>
             </DrawerContentScrollView>
