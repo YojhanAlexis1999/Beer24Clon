@@ -1,13 +1,14 @@
 import React from 'react'
 import { useWindowDimensions } from 'react-native'
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import { createDrawerNavigator } from '@react-navigation/drawer'
 
 import Inicio from '../inicio/Inicio'
 import Preparacion from '../inicio/preparacion/Preparacion'
 import Carta from '../inicio/carta/Carta'
 import Ubicacion from '../inicio/ubicacion/Ubicacion'
-import Orden from '../inicio/orden/Orden';
-import CambioCiudad from '../inicio/cambio_ciudad/CambioCiudad';
+import Orden from '../inicio/orden/Orden'
+import CambioCiudad from '../inicio/cambio_ciudad/CambioCiudad'
+import Productos from '../inicio/carta/Productos'
 
 import DrawerContent from './DrawerContent';
 
@@ -31,30 +32,13 @@ const Drawer = ({ navigation }) => {
             edgeWidth={100}
             drawerContent={props => <DrawerContent {...props} navigation={navigation} />}
         >
-            <Menu.Screen
-                name="Index"
-                component={Inicio}
-            />
-            <Menu.Screen
-                name="Preparacion"
-                component={Preparacion}
-            />
-            <Menu.Screen
-                name="Carta"
-                component={Carta}
-            />
-            <Menu.Screen 
-                name="Ubicacion"
-                component={Ubicacion}
-            />
-            <Menu.Screen 
-                name="Orden"
-                component={Orden}
-            />
-            <Menu.Screen 
-                name="CambioCiudad"
-                component={CambioCiudad}
-            />
+            <Menu.Screen name="Index" component={Inicio} />
+            <Menu.Screen name="Preparacion" component={Preparacion} />
+            <Menu.Screen name="Carta" component={Carta} />
+            <Menu.Screen name="Ubicacion" component={Ubicacion} />
+            <Menu.Screen name="Orden" component={Orden} />
+            <Menu.Screen name="CambioCiudad" component={CambioCiudad} />
+            <Menu.Screen name="Productos" component={Productos} />
         </Menu.Navigator>
     )
 }

@@ -3,10 +3,8 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 
 import Drawer from './src/drawer/Drawer'
-import Preparacion from './src/inicio/preparacion/Preparacion'
-import Carta from './src/inicio/carta/Carta'
-import Ubicacion from './src/inicio/ubicacion/Ubicacion'
-import CambioCiudad from './src/inicio/cambio_ciudad/CambioCiudad';
+import Producto from './src/inicio/carta/Producto'
+import Invitado from './src/auth/Invitado'
 
 import Login from './src/auth/Login'
 import Registro from './src/auth/Registro'
@@ -27,9 +25,11 @@ const App = () => {
           <StackNavigator.Navigator>
 
             <StackNavigator.Screen name="Inicio" component={Drawer} options={options} />
+            <StackNavigator.Screen name="Producto" component={Producto} options={options} />
+            <StackNavigator.Screen name="Invitado" component={Invitado} options={options} />
 
-            <StackNavigator.Screen name="Login" component={Login} />
-            <StackNavigator.Screen name="Registro" component={Registro} />
+            <StackNavigator.Screen name="Login" component={Login} options={options} />
+            <StackNavigator.Screen name="Registro" component={Registro} options={options} />
 
           </StackNavigator.Navigator>
         </NavigationContainer>
